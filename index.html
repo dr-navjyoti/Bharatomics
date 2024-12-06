@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatOmics - Your Partner in Scientific Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/BharatOmics_Logo_Final.jpg" alt="BharatOmics Logo">
+            </div>
+            <div class="company-info">
+                <h1 class="company-name">BharatOmics</h1>
+                <p class="tagline">Bridging The Omics Gap</p>
+            </div>
+            <nav>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Services <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-content">
+                <li><a href="services.html#bioinformatics">Bioinformatics/Omics Data Analysis</a></li>
+                <li><a href="services.html#sequencing">Sequencing Services</a></li>
+                <li><a href="services.html#writing">Scientific Writing Services</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+            <a href="form.html" class="cta">Get Started</a>
+          </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slides">
+                <img src="images/dna-sequencing.jpg" alt="Slide 1">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>High-Quality Sequencing Services</h1>
+                    <p>Delivering precise, fast, and reliable sequencing solutions tailored to your needs.</p>
+                    <a href="Services.html#sequencing" class="btn">Read More</a> <!-- For Sequencing --> <!-- The button on a new line -->
+                  </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slides">
+                <img src="images/Scientific_Writing.jpeg" alt="Slide 2">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Expert Scientific Writing</h1>
+                    <p>Let us transform your research into impactful publications.</p>
+                    <a href="Services.html#writing" class="btn">Read More</a> <!-- For Scientific Writing -->
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slides">
+                <img src="images/laboratory.jpeg" alt="Slide 3">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Cutting-Edge Research Support</h1>
+                    <p>Enabling innovation through dedicated scientific research services.</p>
+                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slides">
+                <img src="images/Bioinformatics.jpeg" alt="Slide 4">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Innovative Data Analysis</h1>
+                    <p>Advanced bioinformatics to power your research discoveries.</p>
+                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                </div>
+            </div>
+
+            <!-- Arrow Navigation -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <!-- Indicators -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-section">
+    <div class="container">
+        <!-- Separate Paragraph for Heading -->
+        <h1 class="section-heading">About BharatOmics</h1>
+
+        <!-- Big box to contain the tabs -->
+        <div class="big-box">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('company')">Our Company</button>
+                <button class="tab-button" onclick="openTab('vision')">Our Vision</button>
+                <button class="tab-button" onclick="openTab('mission')">Our Mission</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="company" class="tab-pane active">
+                    <p class="justified">BharatOmics is your trusted partner in scientific research and innovation. We specialize in comprehensive bioinformatics and omics data analysis, offer cutting-edge sequencing services, assist in impactful scientific writing, and supply high-quality scientific goods. Our expert team is dedicated to empowering researchers across disciplines with innovative solutions tailored to their unique challenges, enabling breakthroughs that advance science and technology.</p>
+                </div>
+                <div id="vision" class="tab-pane">
+                    <p class="justified">Our vision is to be a global leader in providing comprehensive scientific services and solutions. By excelling in bioinformatics and sequencing, advancing scientific communication, and delivering reliable scientific products, we aim to drive innovations that enhance healthcare, agriculture, environmental sustainability, and industrial advancements. BharatOmics aspires to bridge the gap between cutting-edge science and practical applications, empowering researchers worldwide.</p>
+                </div>
+                <div id="mission" class="tab-pane">
+                    <p class="justified">At BharatOmics, our mission is to provide end-to-end support for the scientific community. Whether it's through robust data analysis, accurate and efficient sequencing, clear and precise scientific communication, or reliable access to essential scientific supplies, we are committed to facilitating groundbreaking research. We aim to bridge gaps in knowledge and resources, empowering scientists to achieve their goals and drive meaningful discoveries.</p>
+                </div>
+            </div>
+
+            <!-- Subtle Learn More Button -->
+            <div class="learn-more">
+    <a href="about.html" class="learn-more-btn">Learn More</a>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Our Services Section -->
+  <section id="our-services" class="services-section">
+    <div class="container">
+        <!-- Section Heading -->
+        <h3 class="section-heading">Our Services</h3>
+
+        <!-- Big box containing the services -->
+        <div class="big-box">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('omics-data-analysis')">Bioinformatics / Omics Data Analysis</button>
+                <button class="tab-button" onclick="openTab('sequencing-services')">Sequencing Services</button>
+                <button class="tab-button" onclick="openTab('scientific-writing')">Scientific Writing</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="omics-data-analysis" class="tab-pane active">
+                    <p class="justified">Our Bioinformatics and Omics Data Analysis service provides comprehensive analysis of complex biological data. We employ advanced statistical methods and bioinformatics tools to derive meaningful insights, facilitating informed decision-making in your research projects.</p>
+                </div>
+                <div id="sequencing-services" class="tab-pane">
+                    <p class="justified">Our Sequencing Services encompass a range of high-throughput sequencing technologies tailored to meet your specific needs. We offer everything from library preparation to data analysis, ensuring your projects yield accurate and reliable results.</p>
+                </div>
+                <div id="scientific-writing" class="tab-pane">
+                    <p class="justified">Our Scientific Writing service helps you articulate your research findings effectively. We provide expert assistance in drafting manuscripts, grant proposals, and technical reports, ensuring clarity and precision in conveying your scientific ideas.</p>
+                </div>
+            </div>
+
+            <!-- Subtle Learn More Button -->
+            <div class="learn-more">
+                <a href="Services.html#bioinformatics" class="learn-more-btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Choose BharatOmics Section -->
+<section id="why-choose-us" class="why-choose-section">
+    <div class="container">
+        <!-- Section Heading -->
+        <h4 class="section-heading">Why Choose BharatOmics</h4>
+
+        <div class="big-box">
+            <div class="reason-grid">
+                <div class="reason">
+                    <h3>Expertise in Bioinformatics</h3>
+                    <p class="justified">Our team comprises highly skilled bioinformaticians with extensive experience in handling various biological data types, ensuring accurate and insightful analysis for your research.</p>
+                </div>
+                <div class="reason">
+                    <h3>Customized Solutions</h3>
+                    <p class="justified">We provide tailored bioinformatics solutions that meet your specific project requirements, helping you achieve your research objectives efficiently.</p>
+                </div>
+                <div class="reason">
+                    <h3>Cutting-Edge Technology</h3>
+                    <p class="justified">BharatOmics utilizes the latest bioinformatics tools and technologies, enabling us to deliver high-quality data analysis and insights.</p>
+                </div>
+                <div class="reason">
+                    <h3>Commitment to Quality</h3>
+                    <p class="justified">We prioritize quality in our services, ensuring that all analyses and reports are thoroughly reviewed for accuracy and reliability.</p>
+                </div>
+                <div class="reason">
+                    <h3>Collaborative Approach</h3>
+                    <p class="justified">We believe in working closely with our clients, fostering collaboration to understand your needs and provide the best support possible.</p>
+                </div>
+                <div class="reason">
+                    <h3>Proven Track Record</h3>
+                    <p class="justified">With numerous successful projects and satisfied clients, we have a proven track record of delivering exceptional bioinformatics services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact us Section -->
+<section id="contact">
+  <div class="contact-section">
+    <div class="contact-header">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please fill out the form below.</p> <!-- Moved this line above the form -->
+    </div>
+    <div class="contact-content">
+        <div class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+                <a href="mailto:info.bhatratomics@gmail.com" class="submit-btn">Send Message</a>
+
+        </div>
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.952002868202!2d76.9589976738986!3d28.63120058414402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0f001ff51af3%3A0xabdab08751837ab8!2sDr.%20N%20Chakraborty%2FBharatOmics!5e0!3m2!1sen!2sin!4v1728208754802!5m2!1sen!2sin"
+             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+    </div>
+</div>
+ </section>
+
+<!-- footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+  <h3>Quick Links</h3>
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#why-choose-us">Why Choose Us</a></li> <!-- Updated link -->
+      <li><a href="index.html#contact">Contact Us</a></li>
+  </ul>
+</div>
+
+            <div class="footer-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info.bharatomics@gmail.com">info.bharatomics@gmail.com</a></p>
+                <p>Phone: +91-8708053623; +919269876666</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BharatOmics. All Rights Reserved.</p>
+            <p>Designed by Dr. Navjyoti Chakraborty</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

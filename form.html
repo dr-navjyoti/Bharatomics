@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatOmics - Your Partner in Scientific Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global reset to avoid extra spaces */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            margin-bottom: 0; /* Remove bottom margin if it exists */
+            padding-bottom: 0; /* Remove padding to avoid unnecessary space */
+        }
+
+        /* Updated CSS for form section */
+        #form-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 20vh; /* Further reduced height */
+            padding-top: 0; /* Remove any top padding */
+            margin-top: 0; /* Ensure no margin above the form */
+        }
+
+        #form-section .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/BharatOmics_Logo_Final.jpg" alt="BharatOmics Logo">
+            </div>
+            <div class="company-info">
+                <h1 class="company-name">BharatOmics</h1>
+                <p class="tagline">Bridging the Omics Gap</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Services <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="services.html#bioinformatics">Bioinformatics/Omics Data Analysis</a></li>
+                            <li><a href="services.html#sequencing">Sequencing Services</a></li>
+                            <li><a href="services.html#writing">Scientific Writing Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="form.html" class="cta">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slides">
+                <img src="images/dna-sequencing.jpg" alt="Slide 1">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>High-Quality Sequencing Services</h1>
+                    <p>Delivering precise, fast, and reliable sequencing solutions tailored to your needs.</p>
+                    <a href="Services.html#sequencing" class="btn">Read More</a> <!-- For Sequencing --> <!-- The button on a new line -->
+                  </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slides">
+                <img src="images/Scientific_Writing.jpeg" alt="Slide 2">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Expert Scientific Writing</h1>
+                    <p>Let us transform your research into impactful publications.</p>
+                    <a href="Services.html#writing" class="btn">Read More</a> <!-- For Scientific Writing -->
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slides">
+                <img src="images/laboratory.jpeg" alt="Slide 3">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Cutting-Edge Research Support</h1>
+                    <p>Enabling innovation through dedicated scientific research services.</p>
+                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slides">
+                <img src="images/Bioinformatics.jpeg" alt="Slide 4">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Innovative Data Analysis</h1>
+                    <p>Advanced bioinformatics to power your research discoveries.</p>
+                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                </div>
+            </div>
+
+            <!-- Arrow Navigation -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <!-- Indicators -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Form Section -->
+    <section id="form-section">
+        <div class="container">
+            <h2>Get Started</h2>
+            <form action="submit_form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="Department">Department:</label>
+                    <input type="text" id="Department" name="Department" required>
+                </div>
+                <div class="form-group">
+                    <label for="Institute">Institute/University:</label>
+                    <input type="text" id="Institute" name="Institute" required>
+                </div>
+                <div class="form-group">
+                    <label for="Address">Address:</label>
+                    <input type="text" id="Address" name="Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Select Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="bioinformatics">Bioinformatics/Omics Data Analysis</option>
+                        <option value="sequencing">Sequencing Services</option>
+                        <option value="writing">Scientific Writing Services</option>
+                        <option value="goods">Scientific Goods/Oligonucleotides/Enzymes/Molecular Biology kits, etc.</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer content here -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BharatOmics. All Rights Reserved.</p>
+                <p>Designed by Dr. Navjyoti Chakraborty</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

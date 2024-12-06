@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatOmics - Your Partner in Scientific Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/BharatOmics_Logo_Final.jpg" alt="BharatOmics Logo">
+            </div>
+            <div class="company-info">
+                <h1 class="company-name">BharatOmics</h1>
+                <p class="tagline">Bridging the Omics Gap</p>
+            </div>
+            <nav>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Services <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-content">
+                <li><a href="services.html#bioinformatics">Bioinformatics/Omics Data Analysis</a></li>
+                <li><a href="services.html#sequencing">Sequencing Services</a></li>
+                <li><a href="services.html#writing">Scientific Writing Services</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+            <a href="form.html" class="cta">Get Started</a>
+          </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slides">
+                <img src="images/dna-sequencing.jpg" alt="Slide 1">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>High-Quality Sequencing Services</h1>
+                    <p>Delivering precise, fast, and reliable sequencing solutions tailored to your needs.</p>
+                    <a href="Services.html#sequencing" class="btn">Read More</a> <!-- For Sequencing --> <!-- The button on a new line -->
+                  </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slides">
+                <img src="images/Scientific_Writing.jpeg" alt="Slide 2">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Expert Scientific Writing</h1>
+                    <p>Let us transform your research into impactful publications.</p>
+                    <a href="Services.html#writing" class="btn">Read More</a> <!-- For Scientific Writing -->
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slides">
+                <img src="images/laboratory.jpeg" alt="Slide 3">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Cutting-Edge Research Support</h1>
+                    <p>Enabling innovation through dedicated scientific research services.</p>
+                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slides">
+                <img src="images/Bioinformatics.jpeg" alt="Slide 4">
+                <div class="overlay"></div>
+                <div class="caption">
+                    <h1>Innovative Data Analysis</h1>
+                    <p>Advanced bioinformatics to power your research discoveries.</p>
+                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                </div>
+            </div>
+
+            <!-- Arrow Navigation -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <!-- Indicators -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Main Content -->
+<section class="services-section">
+    <div class="container">
+        <h1>Our Services</h1>
+
+        <!-- Bioinformatics/Omics Data Analysis Services -->
+        <section id="bioinformatics">
+            <h2>Bioinformatics/Omics Data Analysis Services</h2>
+            <p>We provide comprehensive solutions for Bioinformatics/Omics data analysis, including genomics, transcriptomics, proteomics, and structural biology, from sample preparation to data analysis and report writing.</p>
+            <ul>
+                <li>Genomics: Variant calling, genome assembly, functional annotation</li>
+                <li>Transcriptomics: RNA-Seq, differential gene expression analysis</li>
+                <li>Proteomics: Protein identification, quantification, and functional annotation</li>
+                <li>Metabolomics: Metabolite profiling, pathway analysis</li>
+                <li>Structural Biology: Molecular modeling, structure prediction, docking studies</li>
+                <li>Data integration: Multi-omics integration and visualization</li>
+            </ul>
+        </section>
+
+        <!-- Sequencing Services -->
+        <section id="sequencing">
+            <h2>Sequencing Services</h2>
+            <p>Our sequencing services cover a wide range of technologies, including Sanger sequencing, next-generation sequencing, and peptide sequencing.</p>
+            <ul>
+                <li>Sanger Sequencing: Capillary electrophoresis-based DNA sequencing</li>
+                <li>Next-Generation Sequencing (NGS): Whole genome, exome, and targeted sequencing</li>
+                <li>RNA Sequencing: Transcriptomics for gene expression and profiling</li>
+                <li>Peptide Sequencing: Mass spectrometry-based peptide sequencing</li>
+                <li>Microbiome Sequencing: 16S rRNA sequencing for microbial community analysis</li>
+                <li>Metagenomics: Shotgun sequencing for environmental and clinical samples</li>
+            </ul>
+        </section>
+
+        <!-- Scientific Writing Services -->
+        <section id="writing">
+            <h2>Scientific Writing Services</h2>
+            <p>Our team of expert writers will help transform your research into impactful publications, from research articles to theses.</p>
+            <ul>
+                <li>Research Articles: Manuscript drafting, editing, and submission support</li>
+                <li>Review Articles: Comprehensive literature reviews and meta-analyses</li>
+                <li>Project Proposal Development: Grant writing and proposal development</li>
+                <li>Thesis Writing: End-to-end support for PhD and Master's theses</li>
+                <li>Conference Posters: Design, content development, and formatting</li>
+              </ul>
+        </section>
+    </div>
+</section>
+
+<!-- footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+  <h3>Quick Links</h3>
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#why-choose-us">Why Choose Us</a></li> <!-- Updated link -->
+      <li><a href="index.html#contact">Contact Us</a></li>
+  </ul>
+</div>
+
+            <div class="footer-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info.bharatomics@gmail.com">info.bharatomics@gmail.com</a></p>
+                <p>Phone: +91-8708053623; +919269876666</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BharatOmics. All Rights Reserved.</p>
+            <p>Designed by Dr. Navjyoti Chakraborty</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

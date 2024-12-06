@@ -1,0 +1,1000 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: #f4f9ff;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width */
+}
+
+/* Full-width container without restrictions */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Stretch container to full width */
+    padding: 0 20px; /* Padding only for some internal space */
+}
+
+/* Logo Section aligned to the left */
+.logo {
+    flex: 0 1 auto;
+}
+
+/* Logo styling */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Company Info */
+.company-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.company-name {
+    color: #006c8d;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.tagline {
+    color: #006c8d;
+    font-size: 18px;
+}
+
+/* Navigation Styling centered */
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Evenly distribute nav links */
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #006c8d;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #34bfa3;
+}
+
+/* Dropdown Styling */
+/* Ensure the parent <li> has position: relative to anchor the dropdown */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;  /* Absolute position relative to the .dropdown parent */
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;  /* Make sure it stays above other content */
+    top: 100%;  /* Ensure it appears directly below the Services button */
+    left: 0;    /* Align it with the left of the parent <li> */
+    min-width: 220px;  /* Set width */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;  /* Show the dropdown on hover */
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: #006c8d;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #e0f2f1;
+}
+
+/* CTA button aligned to the right */
+.cta {
+    background-color: #34bfa3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Align the button to the right */
+}
+
+.cta:hover {
+    background-color: #2ca08a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .cta {
+        margin-top: 20px;
+    }
+}
+
+/* Slider */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    top: 55%; /* Adjust this to position caption and button lower */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.caption h1 {
+    font-size: 36px;
+    margin-bottom: 10px; /* Spacing between title and text */
+}
+
+.caption p {
+    font-size: 18px;
+    margin-bottom: 30px; /* Adds space between the text and button */
+}
+
+.caption .btn {
+    display: inline-block;
+    background-color: #34bfa3;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.caption .btn:hover {
+    background-color: #2ca08a;
+}
+
+
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+.dot.active {
+    background-color: #0078A8;
+}
+/* About Us Section Styling */
+.about-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #00657b;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.big-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: #00657b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tab-button:hover {
+  background-color: #004d5a;
+}
+
+.tab-button.active {
+  background-color: #004d5a;
+}
+
+.tab-content {
+  text-align: left;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.justified {
+  text-align: justify;
+}
+
+.learn-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.learn-more-btn {
+  background-color: transparent;
+  color: #00657b;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid #00657b;
+  transition: all 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #00657b;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .big-box {
+      padding: 15px;
+  }
+
+  .tabs {
+      flex-direction: column;
+  }
+
+  .tab-button {
+      margin-bottom: 10px;
+  }
+}
+
+/* Our Services Section Styling */
+.services-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #00657b;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.big-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #00657b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tab-button:hover {
+    background-color: #004d5a;
+}
+
+.tab-button.active {
+    background-color: #004d5a;
+}
+
+.tab-content {
+    text-align: left;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.justified {
+    text-align: justify;
+}
+
+.learn-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.learn-more-btn {
+    background-color: transparent;
+    color: #00657b;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #00657b;
+    transition: all 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #00657b;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .big-box {
+        padding: 15px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        margin-bottom: 10px;
+    }
+}
+/* Why Choose BharatOmics Styling */
+.why-choose-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #00657b;
+}
+
+.big-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.reason {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reason h3 {
+    font-size: 24px;
+    color: #00657b;
+    margin-bottom: 10px;
+}
+
+.justified {
+    text-align: justify;
+}
+
+.learn-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.learn-more-btn {
+    background-color: transparent;
+    color: #00657b;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #00657b;
+    transition: all 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #00657b;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .big-box {
+        padding: 15px;
+    }
+}
+/* Contact us Styling */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Light background for the section */
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced space below header */
+}
+
+.contact-header h2 {
+    font-size: 28px; /* Smaller heading size */
+    color: #00657b; /* Header color */
+}
+
+.contact-header p {
+    font-size: 14px; /* Smaller paragraph size */
+    color: #555;
+    margin-bottom: 10px; /* Adjusted space below paragraph */
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    flex-wrap: wrap; /* Allow wrapping to maintain alignment */
+}
+
+.contact-form {
+    flex: 1; /* Allow form to grow equally */
+    min-width: 300px; /* Minimum width for the form */
+    background-color: #ffffff; /* White background for form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space below the form */
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00657b; /* Highlight border color on focus */
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #00657b; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #004e5b; /* Darker shade on hover */
+}
+
+.contact-map {
+    flex: 1; /* Allow map to grow equally */
+    min-width: 300px; /* Minimum width for the map */
+}
+
+.contact-map h3 {
+    margin-bottom: 10px;
+    color: #00657b; /* Header color */
+}
+
+.contact-map iframe {
+    width: 90%;
+    height: 430px; /* Larger height for map */
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .contact-form,
+    .contact-map {
+        flex: 1; /* Allow form and map to take full width */
+        min-width: 100%; /* Full width on smaller screens */
+    }
+
+    .contact-map iframe {
+        height: 250px; /* Adjust map height for mobile */
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #e0f2f1; /* Light teal background color */
+    color: #333333; /* Dark text color for better contrast */
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-links h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00657b; /* Header color */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #00657b; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #005048; /* Darker shade on hover */
+}
+
+.footer-info {
+    flex: 1;
+    text-align: left; /* Left-aligned text for Contact Us */
+}
+
+.footer-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00657b; /* Header color */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: left; /* Keep left alignment on smaller screens */
+        margin-top: 20px;
+    }
+}
+/* About Us page Styles */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 40;
+    line-height: 1.6;
+    background-color: White;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Heading Styles */
+h1, h2 {
+    color: #004d4d; /* Teal matching the index page */
+}
+
+/* About Us Section */
+/* Common styles for all sections (About, Vision, Mission, Leadership) */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Apply similar styles to About, Mission, Vision sections */
+.section {
+    background-color: White; /* Background color for uniformity */
+    padding: 40px; /* Padding to create space inside the sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.section h2 {
+    font-size: 2.2em;
+    color: #004d4d;
+    margin: 20px;
+    text-align: center;
+}
+
+.section p {
+    font-size: 1.1em;
+    color: #004d4d;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Leadership and Team specific */
+.leadership-team {
+    background-color: White;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 120px;
+    height: 120px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #00695c;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #004d4d;
+    margin-bottom: 10px;
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #e0f2f1; /* Light teal background for the footer */
+    color: #004d4d;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer a {
+    color: #00695c; /* Slightly darker teal for links */
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #00695c;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Services Section Styling */
+.services-section {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+
+.services-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure a top-down layout */
+}
+
+.services-section h1 {
+    font-size: 36px;
+    color: #005b64; /* Teal color for headings */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.service h2 {
+    font-size: 28px;
+    color: #005b64;
+    margin-bottom: 20px;
+}
+
+.service p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Keeps some space between bullet and text */
+    text-align: left; /* Ensures text aligns left */
+}
+
+.service ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left; /* Ensures each bullet point aligns left */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #e0f7fa;
+    padding: 20px 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-content .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-content .footer-links ul li {
+    margin-bottom: 10px;
+}
+
+footer .footer-content .footer-links ul li a {
+    text-decoration: none;
+    color: #005b64;
+}
+
+footer .footer-content .footer-info p {
+    color: #333;
+}
+
+footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #333;
+}
+<style>
+/* Updated CSS for centering the form with less blank space */
+#form-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns form to the top rather than vertically centered */
+    min-height: 40vh; /* Reduced height to decrease blank space above */
+    padding-top: 20px; /* Optional: Adjust if there's still extra space */
+}
+
+#form-section .container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+</style>
