@@ -3,41 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BharatOmics - Your Partner in Scientific Excellence</title>
+    <title>About Us - BharatOmics</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="images/BharatOmics_Logo_Final.jpg" alt="BharatOmics Logo">
+        <div class="container header-container">
+            <div class="brand-group">
+                <div class="logo">
+                    <img src="images/BharatOmics_Logo_Final.jpg" alt="BharatOmics Logo">
+                </div>
+                <div class="company-info">
+                    <h1 class="company-name">BharatOmics</h1>
+                    <p class="tagline">Bridging The Omics Gap</p>
+                </div>
             </div>
-            <div class="company-info">
-                <h1 class="company-name">BharatOmics</h1>
-                <p class="tagline">Bridging the Omics Gap</p>
-            </div>
-            <nav>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <a href="#">Services <span class="arrow">&#9662;</span></a>
-            <ul class="dropdown-content">
-                <li><a href="services.html#bioinformatics">Bioinformatics/Omics Data Analysis</a></li>
-                <li><a href="services.html#sequencing">Sequencing Services</a></li>
-                <li><a href="services.html#writing">Scientific Writing Services</a></li>
-            </ul>
-        </li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-</nav>
 
-            <a href="form.html" class="cta">Get Started</a>
-          </div>
+            <!-- Mobile Hamburger Button -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">&#9776;</button>
+
+            <nav id="main-nav">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Services <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="services.html#bioinformatics">Bioinformatics/Omics Data Analysis</a></li>
+                            <li><a href="services.html#sequencing">Sequencing Services</a></li>
+                            <li><a href="services.html#writing">Scientific Writing Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="mobile-cta-item"><a href="form.html" class="cta">Get Started</a></li>
+                </ul>
+            </nav>
+
+            <a href="form.html" class="cta desktop-cta">Get Started</a>
+        </div>
     </header>
-</body>
-</html>
 
     <!-- Hero Section with Image Slider -->
     <section class="hero">
@@ -49,8 +54,8 @@
                 <div class="caption">
                     <h1>High-Quality Sequencing Services</h1>
                     <p>Delivering precise, fast, and reliable sequencing solutions tailored to your needs.</p>
-                    <a href="Services.html#sequencing" class="btn">Read More</a> <!-- For Sequencing --> <!-- The button on a new line -->
-                  </div>
+                    <a href="services.html#sequencing" class="btn">Read More</a>
+                </div>
             </div>
 
             <!-- Slide 2 -->
@@ -60,7 +65,7 @@
                 <div class="caption">
                     <h1>Expert Scientific Writing</h1>
                     <p>Let us transform your research into impactful publications.</p>
-                    <a href="Services.html#writing" class="btn">Read More</a> <!-- For Scientific Writing -->
+                    <a href="services.html#writing" class="btn">Read More</a>
                 </div>
             </div>
 
@@ -71,7 +76,7 @@
                 <div class="caption">
                     <h1>Cutting-Edge Research Support</h1>
                     <p>Enabling innovation through dedicated scientific research services.</p>
-                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                    <a href="services.html#bioinformatics" class="btn">Read More</a>
                 </div>
             </div>
 
@@ -82,7 +87,7 @@
                 <div class="caption">
                     <h1>Innovative Data Analysis</h1>
                     <p>Advanced bioinformatics to power your research discoveries.</p>
-                    <a href="Services.html#bioinformatics" class="btn">Read More</a> <!-- For Bioinformatics -->
+                    <a href="services.html#bioinformatics" class="btn">Read More</a>
                 </div>
             </div>
 
@@ -100,93 +105,95 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- About Us Main Content -->
+    <main class="about-section">
+        <div class="container">
+            <div class="section" id="about-bharatomics">
+                <h2 class="section-heading">About BharatOmics</h2>
+                <p class="justified">BharatOmics is a cutting-edge organization dedicated to bridging the gaps in modern scientific research. We specialize in a wide range of services, including advanced bioinformatics and omics data analysis, state-of-the-art sequencing services, impactful scientific writing, and providing reliable scientific goods. Our mission is to empower researchers and institutions worldwide by delivering innovative solutions tailored to their unique challenges, ensuring that science progresses seamlessly from discovery to application.</p>
+            </div>
 
-    <!-- About Us Section -->
-    <div class="section" id="about-bharatomics">
-      <h2>About BharatOmics</h2>
-      <p>BharatOmics is a cutting-edge organization dedicated to bridging the gaps in modern scientific research. We specialize in a wide range of services, including advanced bioinformatics and omics data analysis, state-of-the-art sequencing services, impactful scientific writing, and providing reliable scientific goods. Our mission is to empower researchers and institutions worldwide by delivering innovative solutions tailored to their unique challenges, ensuring that science progresses seamlessly from discovery to application.</p>
+            <div class="section" id="our-vision">
+                <h2 class="section-heading">Our Vision</h2>
+                <p class="justified">Our vision is to be a global leader in providing holistic scientific solutions. Through our expertise in bioinformatics, sequencing, scientific writing, and scientific goods, we aspire to transform how research is conducted and applied. We aim to empower researchers to unlock new scientific discoveries that advance knowledge and address critical challenges across healthcare, environmental sustainability, and industrial progress. BharatOmics envisions bridging the gap between innovative science and practical applications for a better future.</p>
+            </div>
 
-  </div>
+            <div class="section" id="our-mission">
+                <h2 class="section-heading">Our Mission</h2>
+                <p class="justified">Our mission is to provide comprehensive support to the scientific community through a synergy of robust bioinformatics tools, efficient sequencing technologies, clear and impactful scientific communication, and dependable access to scientific supplies. By offering these services and solutions, we aim to accelerate groundbreaking research and empower scientists to achieve their goals. BharatOmics is dedicated to fostering innovation and enabling discoveries that have a meaningful impact on science, healthcare, agriculture, and the environment.</p>
+            </div>
 
-  <div class="section" id="our-vision">
-      <h2>Our Vision</h2>
-      <p>Our vision is to be a global leader in providing holistic scientific solutions. Through our expertise in bioinformatics, sequencing, scientific writing, and scientific goods, we aspire to transform how research is conducted and applied. We aim to empower researchers to unlock new scientific discoveries that advance knowledge and address critical challenges across healthcare, environmental sustainability, and industrial progress. BharatOmics envisions bridging the gap between innovative science and practical applications for a better future.</p>
-  </div>
+            <div class="section leadership-team">
+                <h2 class="section-heading">Leadership and Team</h2>
+                <p class="justified" style="margin-bottom: 30px;">Our team is comprised of experienced professionals dedicated to driving innovation and delivering excellence in bioinformatics, sequencing services, and scientific writing. Meet the leaders who guide BharatOmics towards a brighter future in scientific research.</p>
 
-  <div class="section" id="our-mission">
-      <h2>Our Mission</h2>
-      <p>Our mission is to provide comprehensive support to the scientific community through a synergy of robust bioinformatics tools, efficient sequencing technologies, clear and impactful scientific communication, and dependable access to scientific supplies. By offering these services and solutions, we aim to accelerate groundbreaking research and empower scientists to achieve their goals. BharatOmics is dedicated to fostering innovation and enabling discoveries that have a meaningful impact on science, healthcare, agriculture, and the environment.</p>
-  </div>
+                <div class="team-member">
+                    <img src="images/Takshi_photo.jpg" alt="Ms. Takshi Sharma">
+                    <div class="team-info">
+                        <h3>Ms. Takshi Sharma</h3>
+                        <p><strong>Co-founder and Partner</strong></p>
+                        <p class="justified">Ms. Takshi Sharma is an accomplished entrepreneur known for successfully establishing and managing several startups in India. She is also an avid science enthusiast with special interest in biological science and omics technologies. At BharatOmics, she plays a crucial role in steering the organization’s strategic direction, fostering innovation, and enabling collaborations that drive the platform's growth and impact in the biotechnology and scientific domains. Her expertise lies in building businesses and creating opportunities that connect science with market needs.</p>
+                    </div>
+                </div>
 
-  <div class="leadership-team">
-<h2>Leadership and Team</h2>
-<p>Our team is comprised of experienced professionals dedicated to driving innovation and delivering excellence in bioinformatics, sequencing services, and scientific writing. Meet the leaders who guide BharatOmics towards a brighter future in scientific research.</p>
+                <div class="team-member">
+                    <img src="images/shaswati pp photo_new_final.jpg" alt="Ms. Shaswati Sinha Chakraborty">
+                    <div class="team-info">
+                        <h3>Ms. Shaswati Sinha Chakraborty</h3>
+                        <p><strong>Co-founder and Partner</strong></p>
+                        <p class="justified">Ms. Shaswati Sinha Chakraborty is a recognized educationist with over 12 years of experience, specializing in science communication and writing services. Her expertise lies in bridging the gap between complex research concepts and creating accessible, engaging content for diverse audiences. At BharatOmics, she plays a vital role in shaping the organization's vision, particularly in its scientific writing services. Leveraging her educational background and experience, she ensures the delivery of clear, concise, and impactful content, enabling researchers and institutions to present their work effectively and professionally.</p>
+                    </div>
+                </div>
 
-<div class="team-member">
-  <img src="images/Takshi_photo.jpg" alt="Ms. Takshi Sharma">
-  <div class="team-info">
-      <h3>Ms. Takshi Sharma</h3>
-      <p>Co-founder and Partner</p>
-      <p>Ms. Takshi Sharma is an accomplished entrepreneur known for successfully establishing and managing several startups in India. She is an also an avid science enthusiast with special interest in biological science and omics technologies. At Bharatomics, she plays a crucial role in steering the organization’s strategic direction, fostering innovation, and enabling collaborations that drive the platform's growth and impact in the biotechnology and scientific domains. Her expertise lies in building businesses and creating opportunities that connect science with market needs.</p>
-  </div>
-</div>
+                <div class="team-member">
+                    <img src="images/Nav1.jpg" alt="Dr. Navjyoti Chakraborty">
+                    <div class="team-info">
+                        <h3>Dr. Navjyoti Chakraborty</h3>
+                        <p><strong>Technical Advisor</strong></p>
+                        <p class="justified">Dr. Navjyoti Chakraborty, Project Scientist at Centre for Sustainable Nitrogen and Nutrient Management, GGS Indraprastha University, is an expert in plant molecular biology, bioinformatics and omics, with almost a decade of experience in research and innovation. His work spans omics data analysis, and scientific communication. With numerous publications in leading journals and a track record of spearheading interdisciplinary research projects, Dr. Chakraborty has consistently demonstrated excellence in leveraging computational tools to drive biological discoveries. His deep understanding of research trends and strong leadership skills make him pivotal in establishing BharatOmics as a trusted partner for scientists globally.</p>
+                    </div>
+                </div>
 
-<div class="team-member">
-  <img src="images/shaswati pp photo_new_final.jpg" alt="Ms. Shaswati Sinha Chakraborty">
-  <div class="team-info">
-      <h3>Ms. Shaswati Sinha Chakraborty</h3>
-      <p>Co-founder and Partner</p>
-      <p>Ms. Shaswati Sinha Chakraborty is a recognized educationist with over 12 years of experience, specializing in science communication and writing services. Her expertise lies in bridging the gap between complex research concepts and creating accessible, engaging content for diverse audiences. At BharatOmics, she plays a vital role in shaping the organization's vision, particularly in its scientific writing services. Leveraging her educational background and experience, she ensures the delivery of clear, concise, and impactful content, enabling researchers and institutions to present their work effectively and professionally.</p>
-  </div>
-</div>
-
-<div class="team-member">
-  <img src="images/Nav1.jpg" alt="Dr. Navjyoti Chakraborty">
-  <div class="team-info">
-      <h3>Dr. Navjyoti Chakraborty</h3>
-      <p>Technical Advisor</p>
-      <p>Dr. Navjyoti Chakraborty, Project Scientist at Centre for Sustainable Nitrogen and Nutrient Management, GGS Indraprastha University, is an expert in plant molecular biology, bioinformatics and omics, with almost a decade of experience in research and innovation. His work spans omics data analysis, and scientific communication. With numerous publications in leading journals and a track record of spearheading interdisciplinary research projects, Dr. Chakraborty has consistently demonstrated excellence in leveraging computational tools to drive biological discoveries. His deep understanding of research trends and strong leadership skills make him pivotal in establishing BharatOmics as a trusted partner for scientists globally. </p>
-  </div>
-</div>
-
-<div class="team-member">
-  <img src="images/Sunila1.jpg" alt="Dr. Sunila Hooda">
-  <div class="team-info">
-      <h3>Dr. Sunila Hooda</h3>
-      <p>Technical Advisor</p>
-      <p>Dr. Sunila Hooda, an Assistant Professor at Ram Lal Anand College, University of Delhi, specializes in microbiology and bioinformatics. With extensive research experience in microbial genomics and antimicrobial resistance, she brings a wealth of expertise in data-driven microbial analysis and innovative biotechnological applications. Her strong background in mentoring projects on microbial plastic degradation and DNA isolation techniques aligns perfectly with BharatOmics' mission to deliver cutting-edge bioinformatics and sequencing services. </p>
-  </div>
-</div>
-</div>
-
-
-<!-- footer Section -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-          <div class="footer-links">
-  <h3>Quick Links</h3>
-  <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="index.html#why-choose-us">Why Choose Us</a></li> <!-- Updated link -->
-      <li><a href="index.html#contact">Contact Us</a></li>
-  </ul>
-</div>
-
-            <div class="footer-info">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info.bharatomics@gmail.com">info.bharatomics@gmail.com</a></p>
-                <p>Phone: +91-8708053623; +919269876666</p>
+                <div class="team-member">
+                    <img src="images/Sunila1.jpg" alt="Dr. Sunila Hooda">
+                    <div class="team-info">
+                        <h3>Dr. Sunila Hooda</h3>
+                        <p><strong>Technical Advisor</strong></p>
+                        <p class="justified">Dr. Sunila Hooda, an Assistant Professor at Ram Lal Anand College, University of Delhi, specializes in microbiology and bioinformatics. With extensive research experience in microbial genomics and antimicrobial resistance, she brings a wealth of expertise in data-driven microbial analysis and innovative biotechnological applications. Her strong background in mentoring projects on microbial plastic degradation and DNA isolation techniques aligns perfectly with BharatOmics' mission to deliver cutting-edge bioinformatics and sequencing services.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 BharatOmics. All Rights Reserved.</p>
-            <p>Designed by Dr. Navjyoti Chakraborty</p>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info.bharatomics@gmail.com">info.bharatomics@gmail.com</a></p>
+                    <p>Phone: +91-8708053623; +919269876666</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BharatOmics. All Rights Reserved.</p>
+                <p>Designed by Dr. Navjyoti Chakraborty</p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
